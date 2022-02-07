@@ -125,17 +125,17 @@ I executed the `vagrant up` and connected through ssh to the box.
 I spent some time learning about the Vagrant and its posibilities and came to a conclusion, that I will try to launch two CentOS/7 virtual machines and create a private network between them.
 For this I copied the Vagrantfile from the previous use case scenario, emptied it and added the following code.
 ~~~
-Vagrant.configure("2") do |config|							# Configures the configuration version                               
-  config.vm.box = "centos/7"								# Specified which box to use
+Vagrant.configure("2") do |config|                          # Configures the configuration version                               
+  config.vm.box = "centos/7"                                # Specified which box to use
   
- config.vm.define "Server1" do |app|						# Defined the Server1 VM
-   app.vm.hostname = "server1"								# Specified the name of the VM
-   app.vm.network :private_network, ip: "192.168.1.101"		# Indicated to create a private network with the defined IP address
+ config.vm.define "Server1" do |app|                        # Defined the Server1 VM
+   app.vm.hostname = "server1"                              # Specified the name of the VM
+   app.vm.network :private_network, ip: "192.168.1.101"     # Indicated to create a private network with the defined IP address
  end
  
-  config.vm.define "Server2" do |app|						# Defined the Server2 VM
-   app.vm.hostname = "server2"								# Specified the name of the VM
-   app.vm.network :private_network, ip: "192.168.1.102"		# Indicated to create a private network with the defined IP address
+  config.vm.define "Server2" do |app|                       # Defined the Server2 VM
+   app.vm.hostname = "server2"                              # Specified the name of the VM
+   app.vm.network :private_network, ip: "192.168.1.102"     # Indicated to create a private network with the defined IP address
  end
 
 end
