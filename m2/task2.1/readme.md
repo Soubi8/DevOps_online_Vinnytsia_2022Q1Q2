@@ -121,7 +121,41 @@ I executed the `vagrant up` and connected through ssh to the box.
 ![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/10.jpg)
 ![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/11.jpg)
 
+#### Optional task
+I spent some time learning about the Vagrant and its posibilities and came to a conclusion, that I will try to launch two CentOS/7 virtual machines and create a private network between them.
+For this I copied the Vagrantfile from the previous use case scenario, emptied it and added the following code.
+~~~
+Vagrant.configure("2") do |config|							# Configures the configuration version                               
+  config.vm.box = "centos/7"								# Specified which box to use
+  
+ config.vm.define "Server1" do |app|						# Defined the Server1 VM
+   app.vm.hostname = "server1"								# Specified the name of the VM
+   app.vm.network :private_network, ip: "192.168.1.101"		# Indicated to create a private network with the defined IP address
+ end
+ 
+  config.vm.define "Server2" do |app|						# Defined the Server2 VM
+   app.vm.hostname = "server2"								# Specified the name of the VM
+   app.vm.network :private_network, ip: "192.168.1.102"		# Indicated to create a private network with the defined IP address
+ end
+
+end
+~~~
+As the next step, I executed `vagrant validate` to verify the integrity of the file content. Then I ran `vagrant up`. The output is present on the screenshot below.
+
+![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/12.jpg)
+
+After the process was successfully completed I executed `vagrant status`
+
+![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/13.jpg)
+
+Then I connected with SSH to both virtual machines, checked the IP address details and ran ping to verify the reachability.
+
+![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/14.jpg)
+
+This concludes my Lab setup.
+
 ### Summary
 During the past few days while doing the tasks in VirtualBox and Vagrant I expanded my knowledge and understanding related to those
-tools. I familiarized myself with the graphical interface of VirtualBox and the most commonly used CLI commands in Vagrant and VirtualBox.
-I can admit, that working with CLI will increase the deployment speed of the sandbox with VMs.
+tools. I familiarized myself with the graphical interface of the VirtualBox and the most commonly used CLI commands in Vagrant and VirtualBox.
+Frankly saying, it was my first interaction with the Vagrant and I must admit that it is a very powerful tool when you need to create a test 
+environment with VMs. 
