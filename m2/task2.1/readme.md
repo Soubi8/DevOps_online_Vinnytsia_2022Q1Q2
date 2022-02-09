@@ -19,20 +19,20 @@ mouse capture functions.
 4. Created a group of two VMs: VM1_Obukhovskyi and VM2_Obukhovskyi. Viewed and tried available functions 
 towards the new group.
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/1.jpg)
+![Screenshot1](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/1.jpg)
 
 5. Changed the state of VM1_Obukhovskyi. Installed the net-tools, created a folder and a file. While doing
 changes, I was creating few snapshots, as shown on the below screenshot.
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/2.jpg)
+![Screenshot2](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/2.jpg)
 
 6. Successfully exported VM1_Obukhovskyi as an OVA file and then imported it back to the VirtualBox.
 7. Navigated through the VM configuration options.
 8. Configured the USB settings of the VM to make the USB stick plugged to host machine visible in the VM.
 Mounted it to usb folder in the VM.
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/3.jpg)
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/4.jpg)
+![Screenshot3](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/3.jpg)
+![Screenshot4](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/4.jpg)
 
 ~~~
     cd /media                                     # Moved to /media folder
@@ -41,8 +41,8 @@ Mounted it to usb folder in the VM.
 ~~~    
 9. Shared the folder from host to the VM1_Obukhovskyi.
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/5.jpg)
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/6.jpg)
+![Screenshot5](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/5.jpg)
+![Screenshot6](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/6.jpg)
 
 Executed few commands in Ubuntu, in order to access the shared folder
 ~~~
@@ -54,7 +54,7 @@ Executed few commands in Ubuntu, in order to access the shared folder
 ~~~
 Folder is accessible and I can see the file that I created on the host machine previously.
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/7.jpg)
+![Screenshot7](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/7.jpg)
 
 10. In the next task I tested the different modes for the network card adapter of the VMs. I used ping
 command to test the reachability between the host machine, VMs and the internet. Below is the table with
@@ -72,7 +72,7 @@ Since machines were cloned, they got the same machine-id.
 I used PuTTY to SSH to test the port forwarding. The port forwarding was configured as indicated on the
 screenshot below.
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/8.jpg)
+![Screenshot8](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/8.jpg)
 
 For the Bridge connection, I had to enable the VirtualBox Bridged Networking Driver on the host machine's NIC.
 For the Internal mode, I had to create the DHCP network first. I used the vboxmanage to achieve this with the
@@ -108,7 +108,7 @@ default Vagrant box by running `init hashicorp/precise64` in the vagrant_test fo
 Next I ran the `vagrant up` and observed how the VM booted. As a next step, I connected to the VM using
 SSH and executed the `date` command.
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/9.jpg)
+![Screenshot9](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/9.jpg)
 
 Finally I shutdown and deleted this virtual machine to move forward with the next task.
 ~~~
@@ -118,8 +118,8 @@ Finally I shutdown and deleted this virtual machine to move forward with the nex
 To complete the last task in the list I decided to install an ubuntu/trusty64 vagrant box. I moved to the other folder and ran `init ubuntu/trusty64`.
 I executed the `vagrant up` and connected through ssh to the box.
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/10.jpg)
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/11.jpg)
+![Screenshot10](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/10.jpg)
+![Screenshot11](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/11.jpg)
 
 #### Optional task
 I spent some time learning about the Vagrant and its posibilities and came to a conclusion, that I will try to launch two CentOS/7 virtual machines and create a private network between them.
@@ -142,15 +142,15 @@ end
 ~~~
 As the next step, I executed `vagrant validate` to verify the integrity of the file content. Then I ran `vagrant up`. The output is present on the screenshot below.
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/12.jpg)
+![Screenshot12](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/12.jpg)
 
 After the process was successfully completed I executed `vagrant status`
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/13.jpg)
+![Screenshot13](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/13.jpg)
 
 Then I connected with SSH to both virtual machines, checked the IP address details and ran ping to verify the reachability.
 
-![](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/14.jpg)
+![Screenshot14](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/14.jpg)
 
 This concludes my Lab setup.
 
