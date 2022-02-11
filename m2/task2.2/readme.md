@@ -77,3 +77,6 @@ Here is the [link](http://m.obukhovskyi.s3-website.eu-central-1.amazonaws.com "A
 ![Screenshot18](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.2/Screenshots/18.jpg)
 
 _Note:_ Please visit the aforementioned link in order to see the up-to-date progress with AWS.
+
+### Summary
+During this task I familiarized myself with the AWS "universe". It is very broad and I continue to explore it and gain knowledge about its offered services on the daily basis.
