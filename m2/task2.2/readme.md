@@ -49,7 +49,7 @@ is present.
 ![Screenshot10](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.2/Screenshots/10.jpg)
 
 9. Reviewed the __Register a Domain Name with Amazon Route 53__ guide.
-10. Followed the __Launch and configure a WordPress instance with Amazon Lightsail__ guide and launched my own WordPress instance.
+10. Followed the __Launch and configure a WordPress instance with Amazon Lightsail__ guide and launched my own WordPress instance with domain __itatsea.pp.ua__.
 
 ![Screenshot11](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.2/Screenshots/11.jpg)
 
