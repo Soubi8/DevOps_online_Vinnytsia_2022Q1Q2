@@ -1,4 +1,4 @@
-## Module 2 Virtualization and Cloud Basic
+## Module 2 - Virtualization and Cloud Basic
 ### AWS Familiarization
 1. I browsed through the __AWS User Guide__ and familiarized myself with the available information related to limitations of the used account
 type as well as about the cost and billing.
