@@ -45,4 +45,4 @@ Source TCP port:            65466
 Destination TCP port:       443
 ~~~
 ### Summary
-In this task I created the predefined networks using Cisco Packet Tracer software. I set the IP addresses as required in the task and verified the communication presense between endpoints. I exported the file __task3.1.pkt__ and placed it in the _m3/task3.1_ folder.
+In this task I created the predefined networks using Cisco Packet Tracer software. I set the IP addresses as required in the task and verified the communication presense between the endpoints. I exported the file __task3.1.pkt__ and placed it in the _m3/task3.1_ folder.
