@@ -1,5 +1,5 @@
-## Module 1 - DevOps Introduction
-### Summary
+# Module 1 - DevOps Introduction
+## Summary
 During this task I used Git to clone the remote private repository from GitHub to my workstation. I was adding and modifying files to commits, created few branches, performed merges. One of the merges resulted as a conflict, which I was able to solve by modifying the conflict file and committing the changes. Eventually I have collected the reference logs and pushed all local branch commits to the origin. 
 
 As a result I enhanced my skills with Git.
@@ -16,5 +16,5 @@ As a result I enhanced my skills with Git.
     git log --help                                    # Displays the help file for git log command
     git reflog                                        # Shows the list of all operations performed in Git
     git push origin --all                             # Pushes all commits of all branches to origin
-### My understanding of DevOps
+## My understanding of DevOps
 DevOps is the set of practices designed to increase an organization's ability to deliver applications and services in the productive, fast and efficient pace. With this methodology, both development and operations teams work together across the entire software application life cycle, from development and test through deployment to operations.
