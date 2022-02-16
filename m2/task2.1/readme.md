@@ -1,8 +1,8 @@
-## Module 2 - Virtualization and Cloud Basics
-### Part 1. Hypervisors
-#### What are the most popular hypervisors for infrastructure virtualization?
+# Module 2 - Virtualization and Cloud Basics
+## Part 1. Hypervisors
+### What are the most popular hypervisors for infrastructure virtualization?
 The most popular hypervisors for infrastructure virtualization are: VMware vSphere/ESXi, Microsoft Hyper-V, Citrix XenServer and KVM.
-#### Briefly describe the main differences of the most popular hypervisors.
+### Briefly describe the main differences of the most popular hypervisors.
 * VMware is the most stable hypervisor with an excellent performance and features among the others. It has the best support available, however at the same time it can be the most expensive solution.
 * If the environment is running Windows Server virtual machines, then Hyper-V hypervisor is a good choice since it is available as a server role on Windows Server. In addition, the Hyper-V is free, but each Windows OS installed on the hosted VMs must be licensed separately. 
 While Hyper-V and VMware vSphere/ESXi hypervisors are distributed under commercial license, the KVM is an open source (GPL license) hypervisor that comes with all the pros and cons of open source. 
@@ -10,7 +10,7 @@ While Hyper-V and VMware vSphere/ESXi hypervisors are distributed under commerci
 * Citrix XenServer is based on the Xen Project hypervisor. It is an industry-leading open-source platform for cost-effective cloud, server and desktop virtualization. Xen as well offers near native drivers for OSs like Microsoft Windows.
 * Generally, all hypervisors have their usage advantages one over another and you should always consider the environment and cost, where those will be used to choose the most suitable solution for the needs of operation.
 
-### Part 2. Work with VirtualBox
+## Part 2. Work with VirtualBox
 1. Downloaded and installed the VirtualBox. Separately downloaded the Ubuntu Server.
 2. Created the VM VM1_Obukhovskyi, installed Ubuntu Server on it. Setup the necessary default settings.
 Performed different actions with VM1_Obukhovskyi control as well as familiarized myself with the keyboard controls and
@@ -102,7 +102,7 @@ following commands in it:
 ~~~
 Overall, the CLI gives an ability to operate within the VirtualBox and speeds up the process of manipulating with the virtual machines.
 
-### Part 3. Work with Vagrant
+## Part 3. Work with Vagrant
 For this task, I downloaded the Vagrant and installed it on my pc. I initialized the environment with the
 default Vagrant box by running `init hashicorp/precise64` in the vagrant_test folder.
 Next I ran the `vagrant up` and observed how the VM booted. As a next step, I connected to the VM using
@@ -121,7 +121,7 @@ I executed the `vagrant up` and connected through ssh to the box.
 ![Screenshot10](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/10.jpg)
 ![Screenshot11](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m2/task2.1/images/11.jpg)
 
-#### Optional task
+### Optional task
 I spent some time learning about the Vagrant and its posibilities and came to a conclusion, that I will try to launch two CentOS/7 virtual machines and create a private network between them.
 For this I copied the Vagrantfile from the previous use case scenario, emptied it and added the following code.
 ~~~
@@ -154,7 +154,7 @@ Then I connected with SSH to both virtual machines, checked the IP address detai
 
 This concludes my Lab setup.
 
-### Summary
+## Summary
 During the past few days while doing the tasks in VirtualBox and Vagrant I expanded my knowledge and understanding related to those
 tools. I familiarized myself with the graphical interface of the VirtualBox and the most commonly used CLI commands in Vagrant and VirtualBox.
 Frankly saying, it was my first interaction with the Vagrant and I must admit that it is a very powerful tool when you need to create a test 
