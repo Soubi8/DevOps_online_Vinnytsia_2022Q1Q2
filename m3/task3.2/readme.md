@@ -14,6 +14,7 @@ The screenshot below represents the achieved result.
 2. Internet network had to be configured with the following pattern: (D+10).M.Y.0/24, which resulted into 13.8.92.0/24 network. I subnetted it into the smaller networks with the /26 netmask. The table below shows those subnets with details.
 
 | | Subnet1 | Subnet2 | Subnet3 | Subnet 4 |
+| - | - | - | - | - |
 | Network | 13.8.92.0/26 | 13.8.92.64/26 | 13.8.92.128/26 | 13.8.92.192/26 |
 | Broadcast | 13.8.92.63 | 13.8.92.127 | 13.8.92.191 | 13.8.92.255 |
 | HostMin | 13.8.92.1 | 13.8.92.65 | 13.8.92.129 | 13.8.92.193 |
@@ -22,7 +23,7 @@ The screenshot below represents the achieved result.
 _Note_: My date of birth is 03/08/1992.
 
 3. I set the IP addresses for the routers on the interfaces as follows:
-
+| - | - |
 | Router ISP1 GE0/0 | 10.92.3.1/24 |
 | Router ISP1 GE1/0 | 13.8.92.66/26 |
 | Router ISP1 GE2/0 | 13.8.92.129/26 |
@@ -58,6 +59,7 @@ _Note_: My date of birth is 03/08/1992.
 8. Since I changed the subnet mask from __/24__ to __/26__ the servers were separated to the individual subnets. I defined the outcome from this change in the table below.
 
 | Name | IP Address | New Subnet IP addresses range (from HostMin to HostMax) |
+| - | - | - |
 | Web Server 1 | 8.3.92.50 | 8.3.92.1 to 8.3.92.62 |
 | Web Server 2 | 8.3.92.100 | 8.3.92.65 to 8.3.92.126 |
 | DNS Server | 8.3.92.150 | 8.3.92.129 to 8.3.92.190 |
@@ -73,7 +75,7 @@ Ultimately, with the subnet mask change, the route changed and had an additional
 ![Screenshot9](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.2/Screenshots/9.jpg)
 ![Screenshot10](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.2/Screenshots/10.jpg)
 
-11. Skipping the sub-task 11, as I move to the additional task.
+11. Skipped the sub-task 11 and moved to the additional task.
 
 ### Additional task. Configuring routing between VLANs
 
@@ -85,6 +87,7 @@ Ultimately, with the subnet mask change, the route changed and had an additional
 
 15. I modified the default gateway on the servers as follows:
 | Name | Default Gateway IP |
+| - | - |
 | Web Server 1 | 8.3.92.1 |
 | Web Server 2 | 8.3.92.65 |
 | DNS Server | 8.3.92.129 |
