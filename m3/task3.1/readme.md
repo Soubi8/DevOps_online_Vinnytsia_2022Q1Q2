@@ -1,5 +1,5 @@
-## Module 3 - Network Fundamentals
-### Task 3.1 - Creating Home Office, Enterprise and Data Center networks
+# Module 3 - Network Fundamentals
+## Task 3.1 - Creating Home Office, Enterprise and Data Center networks
 1. This and the other tasks in the module were completed in the Cisco Packet Tracer software. For the first sub-task I had to reproduce the network layout as shown in the hometask. This was achieved by dragging
 the icons to the main area in the application. Below screenshot represents the achieved result.
 _Note_: My date of birth is 03/08/1992. 
@@ -44,5 +44,5 @@ Destination IP address:     93.184.215.201
 Source TCP port:            65466
 Destination TCP port:       443
 ~~~
-### Summary
+## Summary
 In this task I created the predefined networks using Cisco Packet Tracer software. I set the IP addresses as required in the task and verified the communication presense between the endpoints. I exported the file __task3.1.pkt__ and placed it in the _m3/task3.1_ folder.
