@@ -1,5 +1,5 @@
-## Module 2 - Virtualization and Cloud Basic
-### AWS Familiarization
+# Module 2 - Virtualization and Cloud Basic
+## AWS Familiarization
 1. I browsed through the __AWS User Guide__ and familiarized myself with the available information related to limitations of the used account
 type as well as about the cost and billing.
 2. The first thing that has to be done - registration on the AWS website. I created an AWS Free Tier account to try some services free of charge.
@@ -78,5 +78,5 @@ Here is the [link](http://m.obukhovskyi.s3-website.eu-central-1.amazonaws.com "A
 
 _Note:_ Please visit the aforementioned link in order to see the up-to-date progress with AWS.
 
-### Summary
+## Summary
 During this task I familiarized myself with the AWS "universe". It is very broad and I continue to explore it and gain knowledge about its offered services on the daily basis.
