@@ -41,4 +41,4 @@ This table represents the entries made to the __RIP Routing__ for each router.
 ![Screenshot6](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.3/Screenshots/6.jpg)
 
 ## Summary
-In this task I worked with the routing. I configured static routing as well as RIP routing on the ISP routers to enable the flow of communication between the separate networks. I used the ping tool to verify the network reachability and tracert to check the route for the traffic flow. The file "task3.3.pkt" with the current mini-project state was exported and placed in the m3/task3.3 folder.
+In this task I worked with the routing. I configured static routing as well as RIP routing on the ISP routers to enable the flow of communication between the separate networks. I used the ping tool to verify the network reachability and tracert to check the route for the traffic flow. The file __task3.3.pkt__ with the current mini-project state was exported and placed in the _m3/task3.3_ folder.
