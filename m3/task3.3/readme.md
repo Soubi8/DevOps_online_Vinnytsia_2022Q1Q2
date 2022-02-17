@@ -1,6 +1,6 @@
 # Module 3 - Network Fundamentals
 ## Task 3.3 - Routing settings
-1. This task was based on the setup completed in the previous 3.2 task (stage with step 11 configuration changes). I changed the IP addresses as described in the __task3.3__
+1. This task was based on the setup completed in the previous 3.2 task (stage with step 11 configuration changes). I changed the IP addresses as described in the __task3.3__.
 
 ![Screenshot1](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.3/Screenshots/1.jpg)
 
