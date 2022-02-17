@@ -8,6 +8,8 @@ In addition I configured the routing tables on the ISP1, ISP2, and ISP3 routers.
 
 ![Screenshot2](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.3/Screenshots/2.jpg)
 
+The following table shows the added static routes.
+
 | Router | Static Route 1 | Static Route 2 |
 | - | - | - |
 | ISP1 | 13.8.92.0/26 via 13.8.92.65 | 8.3.92.0/24 via 13.8.92.130 |
@@ -24,7 +26,7 @@ In addition I configured the routing tables on the ISP1, ISP2, and ISP3 routers.
 
 ### Additional task. Configuring dynamic routing
 4. I deleted the existing static routes in the first place.
-5. As the next step, I configured the RIP protocol on the routers. The networks which are directly connected to the source router were added to the RIP routing configuration in a class format. See the example of __RIP routing__ for __Router ISP3__ below.
+5. As the next step, I configured the RIP routing on the routers. The networks which are directly connected to the source router were added to the RIP routing configuration in a class format. See the example of __RIP routing__ for __Router ISP3__ below.
 
 ![Screenshot5](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.3/Screenshots/5.jpg)
 
