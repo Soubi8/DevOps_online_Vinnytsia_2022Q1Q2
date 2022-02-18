@@ -11,7 +11,7 @@ The screenshot below represents the achieved result.
 
 ![Screenshot1](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.2/Screenshots/1.jpg)
 
-2. Internet network had to be configured with the following pattern: __(D+10).M.Y.0/24__, which resulted into __13.8.92.0/24__ network. I subnetted it into the smaller networks with the /26 netmask. The table below shows those subnets with details.
+2. Internet network had to be configured with the following pattern: __(D+10).M.Y.0/24__, which resulted into __13.8.92.0/24__ network. I subnetted it into the smaller networks with the /26 prefix. The table below shows those subnets with details.
 
 | | Subnet1 | Subnet2 | Subnet3 | Subnet 4 |
 | - | - | - | - | - |
@@ -59,8 +59,8 @@ _Note_: My date of birth is 03/08/1992.
 ![Screenshot6](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.2/Screenshots/6.jpg)
 ![Screenshot7](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.2/Screenshots/7.jpg)
 
-7. Changed the subnet mask from __/24__ to __/26__ on the servers within Data Center network.
-8. Since I changed the subnet mask from __/24__ to __/26__ the servers were separated to the individual subnets. I defined the outcome from this change in the table below.
+7. Changed the subnet mask from __/24__ prefix to __/26__ prefix on the servers within Data Center network.
+8. Based on the previous step the servers were separated to the individual subnets. I defined the outcome from this change in the table below.
 
 | Name | IP Address | New Subnet IP addresses range (from HostMin to HostMax) |
 | - | - | - |
