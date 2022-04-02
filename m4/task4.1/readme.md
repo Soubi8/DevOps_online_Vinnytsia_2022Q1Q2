@@ -32,14 +32,18 @@ Read the manuals about the `man` and `info` commands. Below are listed few of th
 
 ![Screenshot5](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/5.jpg)
 ![Screenshot6](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/6.jpg)
+
 ![Screenshot7](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/7.jpg)
+
 ![Screenshot8](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/8.jpg)
 
 ### 6. Explore the more and less commands using the help system. View the contents of files .bash* using commands.
 Used `more --help` and `less --help` to familiarize myself with the commands. Executed the `more .bash*` and `less .bash*`. 
 
 ![Screenshot9](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/9.jpg)
+
 ![Screenshot10](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/10.jpg)
+
 ![Screenshot11](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/11.jpg)
 
 ### 7. * Determine the last logon time for all users. Tip: You should read the documentation for the finger command.
@@ -70,6 +74,7 @@ Then I executed the `tree -Pa 'user*'` to display only the files containing __us
 As the final step for this subtask I ran the `tree -L 2 /`, where __-L 2 /__ displays the depth of 2 in the root directory. 
 
 ![Screenshot17](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/17.jpg)
+
 ![Screenshot18](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/18.jpg)
 
 ### 2. What command can be used to determine the type of file (for example, text or binary)? Give an example.
@@ -177,6 +182,7 @@ This time to find all files in the __/etc__ directory that contain the __ss__ ch
 `ls -la /etc | grep 'ss'`
 
 ![Screenshot36](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/36.jpg)
+
 ![Screenshot37](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/37.jpg)
 
 ### 12. Organize a screen-by-screen print of the contents of the /etc directory. Hint: You must use stream redirection operations.
