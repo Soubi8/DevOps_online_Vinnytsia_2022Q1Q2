@@ -173,7 +173,7 @@ For this subtask, I chose to find the count of word __reboot__ in the file __.ba
 ![Screenshot34](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/34.jpg)
 
 ### 10. Using the find command, find all files in the /etc directory containing the host character sequence.
-To find all files containing the __host__ character sequence in the /etc directory I used the following command `find /etc -name 'host*'`
+To find all files containing the __host__ character sequence in the __/etc__ directory I used the following command `find /etc -name 'host*'`
 
 ![Screenshot35](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/35.jpg)
 
