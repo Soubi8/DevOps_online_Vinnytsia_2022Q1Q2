@@ -31,6 +31,7 @@ Read the manuals about the `man` and `info` commands. Below are listed few of th
 | info | -k, --apropos=STRING | Looks up STRING in all indices of all manuals and then prints it |
 
 ![Screenshot5](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/5.jpg)
+
 ![Screenshot6](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/6.jpg)
 
 ![Screenshot7](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/7.jpg)
@@ -101,6 +102,7 @@ b) `cd /home/max`
 - copy the created file to your home directory using relative and absolute addressing.
 - delete the previously created subdirectory with the file requesting removal;
 - delete the file copied to the home directory.
+
 To create the subdirectory in the home directory I ran `mkdir ~/Max`.
 
 ![Screenshot22](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/22.jpg)
@@ -131,6 +133,7 @@ labwork2;
 - rename the hard link file to hard_lnk_labwork2;
 - rename the soft link file to symb_lnk_labwork2 file;
 - then delete the labwork2. What changes have occurred and why?
+
 Created the subdirectory __test__ in the home directory - `mkdir test`. Copied the __.bash_history__ file and to the users home directory and renamed it to __labwork2__ - `cp .bash_history labwork2`.
 
 ![Screenshot27](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/27.jpg)
