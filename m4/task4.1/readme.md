@@ -1,7 +1,7 @@
 # Module 4 - Linux Essentials
 ## Task 4.1 Part 1
 ### 1. Log in to the system as root (or sudo-er).
-As the first step, I checked whether my the current account is part of the group __sudo__ by executing `groups max`. 
+As the first step, I checked whether my current account is part of the group __sudo__ by executing `groups max`. 
 
 ![Screenshot1](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/1.jpg)
 
@@ -11,7 +11,7 @@ To change the password I used the `passwd` command. Familiarized myself with the
 ![Screenshot2](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/2.jpg)
 
 ### 3. Determine the users registered in the system, as well as what commands they execute. What additional information can be gleaned from the command execution?
-To find out who is logged into the system and what command is used I executed the `w` command. Then I read through the manual for the same command and executed it with the options `-hs`, where __-h__ removes the header and __-s__ shows the output in the short form.
+To find out who is logged into the system and what command is used I executed the `w` command. Then I read through the manual for the same command and executed it with the options `-hs`, where `-h` removes the header and `-s` shows the output in the short form.
 
 ![Screenshot3](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/3.jpg)
 
@@ -72,7 +72,7 @@ Then I executed the `tree -Pa 'user*'` to display only the files containing __us
 
 ![Screenshot16](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/16.jpg)
 
-As the final step for this subtask I ran the `tree -L 2 /`, where __-L 2 /__ displays the depth of 2 in the root directory. 
+As the final step for this subtask I ran the `tree -L 2 /`, where `-L 2 /` displays the depth of 2 in the root directory. 
 
 ![Screenshot17](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/17.jpg)
 
@@ -84,9 +84,7 @@ The `file` command is used to determine the type of file. Example is below.
 ![Screenshot19](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/19.jpg)
 
 ### 3. Master the skills of navigating the file system using relative and absolute paths. How can you go back to your home directory from anywhere in the filesystem? 
-Familiarized myself with the absolute and relative paths, navigated through the system using `cd` command. In order to go to the user's home folder, I found two ways:
-a) `cd ~`
-b) `cd /home/max`
+Familiarized myself with the absolute and relative paths, navigated through the system using `cd` command. In order to go to the user's home folder, I found two ways: `cd ~`, `cd /home/max`.
 
 ![Screenshot20](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/20.jpg)
 
@@ -123,7 +121,7 @@ Deleted the other two files created previously - `rm list_of_directories.txt lis
 
 ![Screenshot26](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/26.jpg)
 
-### 6. 6) Perform the following sequence of operations:
+### 6. Perform the following sequence of operations:
 - create a subdirectory test in the home directory;
 - copy the .bash_history file to this directory while changing its name to
 labwork2;
@@ -160,7 +158,7 @@ As the last step for this subtask I removed the __labwork2__ file. As a result, 
 ![Screenshot31](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/31.jpg)
 
 ### 7. Using the locate utility, find all files that contain the squid and traceroute sequence. 
-To find all the files that contain the __squid__ and __traceroute__ sequence by using locate I executed the following - `locate *squid*` and `locate *traceroute*`.
+To find all the files that contain the __squid__ and __traceroute__ sequence by using `locate` I executed the following - `locate *squid*` and `locate *traceroute*`.
 
 ![Screenshot32](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/32.jpg)
 
@@ -181,8 +179,7 @@ To find all files containing the __host__ character sequence in the /etc directo
 
 ### 11. List all objects in /etc that contain the ss character sequence. How can I duplicate a similar command using a bunch of grep?
 This time to find all files in the __/etc__ directory that contain the __ss__ character sequence I executed the following commands:
-`find /etc -name '*ss*'`
-`ls -la /etc | grep 'ss'`
+`find /etc -name '*ss*'`, `ls -la /etc | grep 'ss'`.
 
 ![Screenshot36](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/36.jpg)
 
@@ -194,7 +191,7 @@ To organize a screen-by-screen print of the contents of the /etc directory I exe
 ![Screenshot38](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/38.jpg)
 
 ### 13. What are the types of devices and how to determine the type of device? Give examples.
-Linux supports three types of hardware device: character, block and network. For character devices, the first letter is __c__, while for block - __b__. 
+Linux supports three types of hardware device: character, block and network. For character devices, the first letter is __c__, while for block it is __b__. 
 
 ![Screenshot39](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.1/Screenshots/39.jpg)
 
