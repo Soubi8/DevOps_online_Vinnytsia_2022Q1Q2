@@ -3,25 +3,24 @@
 ### 1. Analyze the structure of the /etc/passwd and /etc/group file, what fields are present in it, what users exist on the system? Specify several pseudo-users, how to define them?
 
 I analyzed my account entry in the `/etc/passwd` file `max:x:1000:1000:Max,123,380382009900,380382112233:/home/max:/bin/bash`.
+
+![Screenshot1](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/1.jpg)
+
 - username `max`
 - password is stored in the `etc/shadow`
 - the UID (User ID) and GID (Group ID) values are `1000`
 - GECOS (User ID Info) has value `Max,123,380382009900,380382112233`
 - home directory is located at `/home/max`
 - user's shell `/bin/bash`
-
-![Screenshot1](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/1.jpg)
-
 Here is the breakdown of the `/etc/group` file's `sudo:x:27:max` entry:
+
+![Screenshot2](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/2.jpg)
+
 - group name `sudo`
 - password, generally not used and is set to blank
 - GID (Group ID) value `27`
 - group list with its members `max`
-
-![Screenshot2](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/2.jpg)
-
-`getent /etc/passwd` to see the existing users on the system. 
-
+`getent /etc/passwd` command is used to see the existing users on the system. 
 Pseudo users are related to system and program services. Example of pseudo-user is below.
 
 ![Screenshot3](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/3.jpg)
@@ -44,7 +43,7 @@ __UID__ is the User Identifier, the value, by which the Unix-like operating syst
 
 __GID__ is the Group Identifier, the value, which identifies the group.
 
-- 0 is reserver for the root group
+- 0 is reserved for the root group
 - 1...99 are reserved for the system and application use
 - 100 and above are allocated for user groups
 
@@ -52,7 +51,7 @@ __GID__ is the Group Identifier, the value, which identifies the group.
 
 ### 4. How to determine belonging of user to the specific group?
 
-`groups` command should be ran to identify the groups membership of the user.
+`groups` command should be executed to identify the groups membership of the user.
 
 ![Screenshot5](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/5.jpg)
 
@@ -100,14 +99,14 @@ I will explain the information columns based on the below example directory.
 
 ![Screenshot13](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/13.jpg)
 
-`d` file type
-`rwxr-xr-x` are permissions
-`2` number of hard links
-`max` owner's account
-`max` group name
-`4096` file size
-`бер 23 14:51` last modification time
-`Desktop` file name
+- `d` file type
+- `rwxr-xr-x` are permissions
+- `2` number of hard links
+- `max` owner's account
+- `max` group name
+- `4096` file size
+- `бер 23 14:51` last modification time
+- `Desktop` file name
 
 ### 12. What access rights exist and for whom (i. e., describe the main roles)? Briefly describe the acronym for access rights.
 
@@ -115,8 +114,10 @@ The permissions consist of 3 blocks:
 - 3 bits of owner rights
 - 3 bits of group rights
 - 3 bits of everyone else's rights
+
 Based on the next example, I will explain the rights in details.
 `drwxr-xr-x 2 max max 4096 бер 23 14:51 Pictures`
+
 The permissions are set as follows:
 - `rwx` owner has read, write and execute rights
 - `r-x` group has read and execute rights
@@ -126,8 +127,8 @@ The permissions are set as follows:
 
 When it comes to the relationship between the file and the user who started the process, the role is determined as follows:
 
-If the UID of the file is the same as the UID of the process, the user is the owner of the file. If the GID of the file matches the GID of any group the user belongs to, he is a member of the group to which the file belongs.
-If neither the UID no the GID of a file overlaps with the UID of the process and the list of groups that the user running it belongs to, that user is an outsider.
+If the __UID__ of the file is the same as the __UID__ of the process, the user is the owner of the file. If the __GID__ of the file matches the __GID__ of any group the user belongs to, he is a member of the group to which the file belongs.
+If neither the __UID__ no the __GID__ of a file overlaps with the __UID__ of the process and the list of groups that the user running it belongs to, that user is an outsider.
 
 ### 14. What commands are used to change the owner of a file (directory), as well as the mode of access to the file? Give examples, demonstrate on the terminal.
 
@@ -148,6 +149,7 @@ Each of the permission may be specified with an octal number:
 - write = 2
 - execute = 1 
 - no permission = 0
+
 The octal equivalents are derived by adding the numbers associated with the four basic permissions. Table below displays the breakdown.
 
 | Octal number | Symbolic | Permission |
