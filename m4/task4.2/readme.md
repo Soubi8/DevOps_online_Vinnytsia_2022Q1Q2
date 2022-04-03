@@ -87,7 +87,7 @@ To lock the user account: `passwd -l username` or `usermod -L username`.
 
 ### 10. How to remove a user's password and provide him with a password-free login for subsequent password change?
 
-`passwd -d username` should be ran to remove the password, following with the `passwd -e username` to set the password to immediately expire, which in turn will force the user to change the password at the user's next login.
+`passwd -d username` can be used to remove the password, following with the `passwd -e username` to set the password to immediately expire, which in turn will force the user to change the password at the user's next login.
 
 ![Screenshot11](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/11.jpg)
 
@@ -95,7 +95,7 @@ To lock the user account: `passwd -l username` or `usermod -L username`.
 
 ### 11. Display the extended format of information about the directory, tell about the information columns displayed on the terminal.
 
-I will explain the information columns based on the below example directory.
+I will explain the information columns based on the below example of directory.
 
 ![Screenshot13](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/13.jpg)
 
