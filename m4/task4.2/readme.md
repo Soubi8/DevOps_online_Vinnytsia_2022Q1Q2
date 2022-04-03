@@ -20,7 +20,9 @@ Here is the breakdown of the `/etc/group` file's `sudo:x:27:max` entry:
 - password, generally not used and is set to blank
 - GID (Group ID) value `27`
 - group list with its members `max`
+
 `getent /etc/passwd` command is used to see the existing users on the system. 
+
 Pseudo users are related to system and program services. Example of pseudo-user is below.
 
 ![Screenshot3](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/3.jpg)
@@ -136,7 +138,7 @@ If neither the __UID__ no the __GID__ of a file overlaps with the __UID__ of the
 
 ![Screenshot14](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.2/Screenshots/14.jpg)
 
-As displayed on the above example, I granted read, write and execute access to the owner, group and everyone else on the `file1` by running `chmod 777 file1`. Other than that I removed the read, write and execute permissions from group on `directory2` by executing `chmod g-rwx directory2`
+As displayed on the above example, I granted read, write and execute access to the owner, group and everyone else on the `file1` by running `chmod 777 file1`. Other than that I removed the read, write and execute permissions from group on `directory2` by executing `chmod g-rwx directory2`.
 
 `chown` command is used to change the owner of the file.
 
