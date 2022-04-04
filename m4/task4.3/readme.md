@@ -60,7 +60,7 @@ Other than that, manual suggests to use the other available utilities: `pgrep`, 
 
 ### 10. What information does top command display?
 
-The top command (table of processes) displays the processor activity of the Linux system and also shows tasks managed by the kernel in real-time. It also presents information about CPU and memory utilization of a list of running processes.
+The `top` command (table of processes) displays the processor activity of the Linux system and also shows tasks managed by the kernel in real-time. It also presents information about CPU and memory utilization of a list of running processes.
 
 ### 11. Display the processes of the specific user using the top command.
 
@@ -77,9 +77,9 @@ There are several interractive commands available to control the `top` command, 
 | Shift+P | Sorts the processes by CPU utilization |
 | Shift+M | Sorts the processes by memory usage |
 | Shift+T | Sorts the processes by cumulative time |
-| i | Shows idle processes |
-| k | Kills the process, PID should be entered |
-| q | Exits the utility |
+| I | Shows idle processes |
+| K | Kills the process, PID should be entered |
+| Q | Exits the utility |
 
 ### 13. Sort the contents of the processes window using various parameters (for example, the amount of processor time taken up, etc.)
 
@@ -180,4 +180,4 @@ I connected to the VM, where my Ubuntu is hosted using `ssh` and `telnet`. Below
 [telnet.pcapng](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m4/task4.3/telnet.pcapng)
 
 ## Summary
-During this task I familiarized myself with the processes and their states in Linux. Other than that, I enhanced my knowledge related to the SSH protocol.
+During this task I familiarized myself with the processes and their states in Linux. I learned how to view the processes and their states using utilities like `ps`, `pstree` and `top`. Other than that, I enhanced my knowledge related to the SSH protocol.
