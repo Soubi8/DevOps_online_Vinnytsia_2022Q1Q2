@@ -2,15 +2,11 @@
 ## Task 5
 ### Prerequisites. Практична частина модуля Linux Networking передбачає створення засобами Virtual Box мережі, що показаний на рисунку 1.
 
-![Screenshot1](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/1.jpg)
+<p align="center">
+  <img src="https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/1.jpg" />
+</p>
 
-Host – це комп’ютер, на якому запущений Virtual Box;
-Server_1 – Віртуальна машина, на якій розгорнуто ОС Linux. Int1 цієї машини в режимі «Мережевий міст» підключений до мережі Net1, тобто знаходиться в адресному просторі домашньої мережі. IP-адреса Int1 встановлюється статично відповідно до адресного простору, наприклад 192.168.1.200/24. Інтерфейси Int2 та Int3 відповідно підключено в режимі «Внутрішня мережа» до мереж Net2 та Net3.
-Client_1 та Client_2 – Віртуальні машини, на яких розгорнуто ОС Linux (бажано різні дистрибутиви, наприклад Ubuntu та CentOS). Інтерфейси підключені в режимі «Внутрішня мережа» до мереж Net2, Net3 та Net4 як показано на рисунку 1.
-Адреса мережі Net2 – 10.Y.D.0/24, де Y – дві останні цифри з вашого року народження, D – дата народження.
-Адреса мережі Net3 – 10.M.Y.0/24, де M – номер місяця народження.
-Адреса мережі Net4 – 172.16.D.0/24.
-__Увага!__ Якщо, адресний простір Net2, Net3 або Net4 перетинається з адресним простором Net1 – відповідну адресу можна змінити на власний розсуд.
+### Host – це комп’ютер, на якому запущений Virtual Box; Server_1 – Віртуальна машина, на якій розгорнуто ОС Linux. Int1 цієї машини в режимі «Мережевий міст» підключений до мережі Net1, тобто знаходиться в адресному просторі домашньої мережі. IP-адреса Int1 встановлюється статично відповідно до адресного простору, наприклад 192.168.1.200/24. Інтерфейси Int2 та Int3 відповідно підключено в режимі «Внутрішня мережа» до мереж Net2 та Net3. Client_1 та Client_2 – Віртуальні машини, на яких розгорнуто ОС Linux (бажано різні дистрибутиви, наприклад Ubuntu та CentOS). Інтерфейси підключені в режимі «Внутрішня мережа» до мереж Net2, Net3 та Net4 як показано на рисунку 1. Адреса мережі Net2 – 10.Y.D.0/24, де Y – дві останні цифри з вашого року народження, D – дата народження. Адреса мережі Net3 – 10.M.Y.0/24, де M – номер місяця народження. Адреса мережі Net4 – 172.16.D.0/24. __Увага!__ Якщо, адресний простір Net2, Net3 або Net4 перетинається з адресним простором Net1 – відповідну адресу можна змінити на власний розсуд.
 
 Based on the prerequisites I prepared 3 VMs. Host PC is operated on the Windows 10 OS.
 
@@ -113,13 +109,13 @@ I will edit it to assign IP addresses on the `Int1` of the `Client1` and `Client
       max-lease-time 7200;
     }
 
-Other than that, it is important to edit the `/etc/default/isc-dhcp-server` to specify the interfaces `dhcpd` should listen to. In my case, for 
+Other than that, it is important to edit the `/etc/default/isc-dhcp-server` to specify the interfaces `dhcpd` should listen to. 
 
     INTERFACESv4="enp0s8 enp0s9"
 
 ![Screenshot12](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/12.jpg)
 
-In addition, I uncommented the line with word `authoritative;`. Then I verify whether the parser finds any errors in the configuration file by executing the following command - `dhcpd -t -cf /etc/dhcp/dhcpd.conf`.
+In addition, I uncommented the line with word `authoritative;`. Then I verified whether the parser found any errors in the configuration file by executing the following command - `dhcpd -t -cf /etc/dhcp/dhcpd.conf`.
 
 ![Screenshot13](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/13.jpg)
 
@@ -194,13 +190,14 @@ I attempted to `ping` and `traceroute` the other network addresses from __Client
 | 172.16.3.1 | Yes |
 | 8.8.8.8 | No |
 
-Basically, the clients are able to reach the IP addresses which they are connected to directly, because routing is switched off by default. Next, I enabled the routing on the __Server1__ which servers as a Default Gateway for both clients.
+Basically, the clients are able to reach the IP addresses which they are connected to directly, because routing is switched off by default. Next, I enabled the routing on the __Server1__ which serves as a Default Gateway for both clients.
 
     sysctl net.ipv4.conf.all.forwarding     #Checks the status of the routing. 0 = Disabled, 1 = Enabled
 
 Verified the status, found it disabled. Enabled the routing by editing `/etc/sysctl.conf` file. There I uncommented the `net.ipv4.ip_forward=1`. 
 
 ![Screenshot26](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/26.jpg)
+![Screenshot55](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/55.jpg)
 
 I added the static route on my router, as shown below in order to have the replies from ping to reach the clients.
 
@@ -214,24 +211,26 @@ After that I repeated the scenario of pinging and tracerouting interfaces as don
 ![Screenshot31](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/31.jpg)
 
 ### 4. На віртуальному інтерфейсу lo Client_1 призначити дві ІР адреси за таким правилом: 172.17.D+10.1/24 та 172.17.D+20.1/24. Налаштувати маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до 172.17.D+20.1 через Net4. Для перевірки використати traceroute.
-To set he __lo__ interface on the __Client1__ to the following addresses Ш executed the following:
+To set he __lo__ interface on the __Client1__ to the following addresses I executed the following:
 
     sudo ip a add 172.17.13.1/24 dev lo
     sudo ip a add 172.17.23.1/24 dev lo
 
 ![Screenshot32](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/32.jpg)
 
-To make the traffic path from __Client_2__ to the __172.17.13.1__ IP address through the __Server1__ I added a route on the __Server1__ as the first step - `sudo ip route add 172.17.13.0/24 via 10.92.3.2 metric 10`.
+To make the traffic path from __Client_2__ to the __172.17.13.1__ IP address through the __Server1__ I added a route on the __Server1__ as the first step -  
+`sudo ip route add 172.17.13.0/24 via 10.92.3.2 metric 10`
 
 ![Screenshot33](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/33.jpg)
 
-As the next step, I added the route on the __Client_2__ - `sudo ip route add 172.17.13.0/24 via 10.8.92.1 metric 10`. 
+As the next step, I added the route on the __Client_2__ - `sudo ip route add 172.17.13.0/24 via 10.8.92.1 metric 10` 
 
 ![Screenshot34](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/34.jpg)
 
 As the result, the traffic from __Client_2__ travels through __Server1__ to the __172.17.13.1__ IP address.
 
-To make the traffic path from __Client_2__ to the __172.17.23.1__ IP address through the __Net4__ I ran the next command on the __Client_2__ - `sudo ip route add 172.17.23.0/24 via 172.16.3.1 metric 10`.
+To make the traffic path from __Client_2__ to the __172.17.23.1__ IP address through the __Net4__ I ran the next command on the __Client_2__ -  
+`sudo ip route add 172.17.23.0/24 via 172.16.3.1 metric 10`
 
 ![Screenshot35](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/35.jpg)
 
@@ -261,6 +260,7 @@ The __SSH__ client was installed by default in all VMs. The connection was strai
 - `user` is the account which will be used for authentication
 - `host` target machine
 - `-p 22` specified port 22 for connection (default)
+
 Screenshots with the sessions are displayed below:
 
 ![Screenshot40](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/40.jpg)
@@ -272,8 +272,8 @@ Screenshots with the sessions are displayed below:
 ![Screenshot43](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5/Screenshots/43.jpg)
 
 ### 7. Налаштуйте на Server_1 firewall таким чином:
-- Дозволено підключатись через SSH з Client_1 та заборонено з Client_2
-- З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
+### - Дозволено підключатись через SSH з Client_1 та заборонено з Client_2
+### - З Client_2 на 172.17.D+10.1 ping проходив, а на 172.17.D+20.1 не проходив
 
 To check the current firewall rules I executed `sudo iptables -L -vn`, where:
 - `-L` lists all rules
