@@ -104,3 +104,5 @@ Ultimately, with the subnet mask change, the route changed and had an additional
 
 ## Summary
 In this task I setup the Internet network and made modification to the interfaces on the various equipment. I worked with the ping and tracert tools, configured VLANs and executed commands in the CLI. I exported the file __task3.2.pkt__ with the current mini-project state and placed it in the _m3/task3.2_ folder.
+
+[task3.2.pkt](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.2/task3.2.pkt)
