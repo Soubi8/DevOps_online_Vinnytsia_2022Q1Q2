@@ -48,3 +48,5 @@
 
 ## Summary
 I worked with the DHCP, DNS and NAT services within the scope of this task. It was quite an interesting journey of working with Cisco Packet Tracer in the Module 3. To summarize, I refreshed my memory on the network fundamentals. The file __task3.4.pkt__ with the final mini-project state was exported and placed in the _m3/task3.4 folder_.
+
+[task3.4.pkt](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m3/task3.4/task3.4.pkt)
