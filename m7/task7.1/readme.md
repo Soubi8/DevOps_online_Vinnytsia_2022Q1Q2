@@ -1,18 +1,18 @@
 # Module 7 - Database Administration    
 ## Task 7.1
-### Part 1
-## 1. Download MySQL server for your OS on VM.
+## Part 1
+### 1. Download MySQL server for your OS on VM.
 To install the MySQL server I executed the `sudo apt-get install mysql-server` command.
 
-## 2. Install MySQL server on VM.
+### 2. Install MySQL server on VM.
 Since I've installed the MySQL in the previous step, I checked the status of the service by running `systemctl status mysql.service`.
 
 ![Screenshot1](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/1.jpg)
 
-## 3. Select a subject area and describe the database schema, (minimum 3 tables)
+### 3. Select a subject area and describe the database schema, (minimum 3 tables)
 I decided to create a database for the __Car Service__ of completed work orders. It will contain 3 tables with information about the clients and their cars, jobs done with date stamps and parts used for the maintenance.
 
-# Table 1. Information about clients and their vehicles
+### Table 1. Information about clients and their vehicles
 | Customer ID | Client's Name | Car | Year | VIN Number | Phone Number |
 | - | - | - | - | - | - |
 | 1001 | Andrii | Mazda 3 | 2008 | 2GNFLGEK5D6416554 | 380688233443 |
@@ -23,7 +23,7 @@ I decided to create a database for the __Car Service__ of completed work orders.
 | 1006 | Svitlana | Hyundai i10 | 2013 | JS2GB41W0Y5183116 | 380977544317 |
 | 1007 | Alina | Audi Q3 | 2018 | 3A8FY58898T170603 | 380938709162 |
 
-# Table 2. Completed work orders
+### Table 2. Completed work orders
 | Order # | Customer ID | Job Description | Price for job | Employee | Total Price |
 | - | - | - | - | - | - | 
 | 22001 | 1002 | Coolant replacement | 1000 | Andrii | 2000 |
@@ -37,7 +37,7 @@ I decided to create a database for the __Car Service__ of completed work orders.
 | 22009 | 1004 | A/C refill | 1000 | Oleksandr | 1600 |
 | 22010 | 1001 | Door handle replacement | 400 | Oleksandr | 1050 |
 
-# Table 3. Parts used for maintenance
+### Table 3. Parts used for maintenance
 | Item Description | Manufacturer | Part Number | Price | Order # | 
 | - | - | - | - | - |
 | Oil 5w20 5L | Total | 8749 | 700 | 22006 |
@@ -53,13 +53,13 @@ I decided to create a database for the __Car Service__ of completed work orders.
 | Door Handle Mazda 3 OEM | Mazda | 12012 | 650 | 22010 |
 | Front Shock (Pair) | Monroe | 62531 | 2400 | 22008 |
 
-## 4. Create a database on the server through the console.
+### 4. Create a database on the server through the console.
 
 ![Screenshot2](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/2.jpg)
 
-`use car_service_week1;` to use the previously created database.
+`use car_service;` to use the previously created database.
 
-## 5. Fill in tables.
+### 5. Fill in tables.
 
 Created 3 tables and filled in the information based on the tables above.
 
@@ -132,27 +132,27 @@ Created 3 tables and filled in the information based on the tables above.
 
 ![Screenshot6](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/6.jpg)
 
-## 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.
+### 6. Construct and execute SELECT operator with WHERE, GROUP BY and ORDER BY.
 `SELECT * FROM work_orders WHERE employee = 'Andrii' GROUP BY order_num ORDER BY customer_id;`
 
 ![Screenshot7](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/7.jpg)
 
-## 7. Execute other different SQL queries DDL, DML, DCL.
-# DDL query
+### 7. Execute other different SQL queries DDL, DML, DCL.
+### DDL query
 
 ![Screenshot8](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/8.jpg)
 
-# DML query
+### DML query
 
 ![Screenshot9](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/9.jpg)
 
-# DCL query
+### DCL query
 
 ![Screenshot10](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/10.jpg)
 
 ![Screenshot11](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/11.jpg)
 
-## 8. Create a database of new users with different privileges. Connect to the database as a new user and verify the privileges allow or deny certain actions.
+### 8. Create a database of new users with different privileges. Connect to the database as a new user and verify the privileges allow or deny certain actions.
 
 ![Screenshot12](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/12.jpg)
 
@@ -160,24 +160,24 @@ Created 3 tables and filled in the information based on the tables above.
 
 ![Screenshot14](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/14.jpg)
 
-## 9. Make a selection from the main table DB MySQL.
+### 9. Make a selection from the main table DB MySQL.
 
 ![Screenshot15](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/15.jpg)
 
-### Part 2
-## 10. Make backup of your database.
+## Part 2
+### 10. Make backup of your database.
 
 ![Screenshot16](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/16.jpg)
 
-## 11. Delete the table and/or part of the data in the table.
+### 11. Delete the table and/or part of the data in the table.
 
 ![Screenshot17](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/17.jpg)
 
-## 12. Restore your database.
+### 12. Restore your database.
 
 ![Screenshot18](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/18.jpg)
 
-## 13. Transfer your local database to RDS AWS.
+### 13. Transfer your local database to RDS AWS.
 I created a MySQL database on AWS RDS first. 
 
 ![Screenshot19](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/19.jpg)
@@ -188,22 +188,22 @@ Then restored the database from the backup created in the step #10. For this mat
 
 ![Screenshot21](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/21.jpg)
 
-## 14. Connect to your database.
+### 14. Connect to your database.
 
 ![Screenshot22](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/22.jpg)
 
-## 15. Execute SELECT operator similar step 6.
+### 15. Execute SELECT operator similar step 6.
 
 ![Screenshot23](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/23.jpg)
 
-## 16. Create a dump of your database.
+### 16. Create a dump of your database.
 
 ![Screenshot24](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/24.jpg)
 
 ![Screenshot25](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/25.jpg)
 
-### Part 3 - MongoDB
-## 17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it).
+## Part 3 - MongoDB
+### 17. Create a database. Use the use command to connect to a new database (If it doesn't exist, Mongo will create it when you write to it).
 
 For this matter, I created __Cluster0__ and connected to it using MongoDB Shell.
 
@@ -211,15 +211,15 @@ For this matter, I created __Cluster0__ and connected to it using MongoDB Shell.
 
 ![Screenshot27](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/27.jpg)
 
-## 18. Create a collection. Use db.createCollection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections.
+### 18. Create a collection. Use db.createCollection to create a collection. I'll leave the subject up to you. Run show dbs and show collections to view your database and collections.
 
 ![Screenshot28](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/28.jpg)
 
-## 19. Create some documents. Insert a couple of documents into your collection. I'll leave the subject matter up to you, perhaps cars or hats.
+### 19. Create some documents. Insert a couple of documents into your collection. I'll leave the subject matter up to you, perhaps cars or hats.
 
 ![Screenshot29](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/29.jpg)
 
-## 20. Use find() to list documents out.
+### 20. Use find() to list documents out.
 
 ![Screenshot30](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m7/task7.1/Screenshots/30.jpg)
 
