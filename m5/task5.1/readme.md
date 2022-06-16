@@ -211,7 +211,7 @@ After that I repeated the scenario of pinging and tracerouting interfaces as don
 ![Screenshot31](https://github.com/Soubi8/DevOps_online_Vinnytsia_2022Q1Q2/blob/main/m5/task5.1/Screenshots/31.jpg)
 
 ### 4. На віртуальному інтерфейсу lo Client_1 призначити дві ІР адреси за таким правилом: 172.17.D+10.1/24 та 172.17.D+20.1/24. Налаштувати маршрутизацію таким чином, щоб трафік з Client_2 до 172.17.D+10.1 проходив через Server_1, а до 172.17.D+20.1 через Net4. Для перевірки використати traceroute.
-To set he __lo__ interface on the __Client1__ to the following addresses I executed the following:
+To set the __lo__ interface on the __Client1__ to the following addresses I executed the following:
 
     sudo ip a add 172.17.13.1/24 dev lo
     sudo ip a add 172.17.23.1/24 dev lo
