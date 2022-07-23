@@ -4,13 +4,13 @@ During this task I used Git to clone the remote private repository from GitHub t
 
 As a result I enhanced my skills with Git.
 ### Commands used:
-    git config --global user.name "user name"         # Sets the user name which is added to commits_
+    git config --global user.name "user name"         # Sets the user name which is added to commits
     git config --global user.email "email address"    # Sets the email address which is added to commits
     git clone <url to Git repository>                 # Clones the remote repository to the workstation
     git add .                                         # Adds files to the Git staging area
     git commit -m "text"                              # Captures the snapshot of the currently staged changes with the comment
     git checkout <branch>                             # Switches over to another branch
-    git checkout -b <branch>                          # Creates branch and swithces over to it
+    git checkout -b <branch>                          # Creates branch and switches over to it
     git status                                        # Displays the state of the staging area and working directory
     git merge <branch>                                # Merges the branches
     git log --help                                    # Displays the help file for git log command
